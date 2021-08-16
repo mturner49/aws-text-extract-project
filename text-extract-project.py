@@ -87,9 +87,8 @@ def remove_words(text):
         if any(word in line for word in keywords):
             print(line)
 
-if __name__ == '__main__':
-
-
+     
+def main():
 
     s3BucketName = "text-extract-project-mturner0627"
     documentName = "Course Syllabus_MSA_8050_Scalable-Data-Analytics.pdf"
@@ -121,6 +120,11 @@ if __name__ == '__main__':
         #     output += textract(s3BucketName, img)
 
     remove_words(output)
+    
+
+if __name__ == '__main__':
+    main()
+
 
 
 
